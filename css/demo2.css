@@ -1,0 +1,6 @@
+h2{
+    color:red;
+    font-weight: bold;
+    font-size: 30px;
+    transition: all 1s 1s linear;
+}

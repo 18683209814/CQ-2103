@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        h2{
+            width: 200px;
+            height: 50px;
+            color: red;
+            font-size: 30px;
+        }
+        ul{
+            width: 200px;
+            height: 150px;
+            border:5px solid pink;
+            border-radius: 20px;
+            color:violet;
+        }
+    </style>
+</head>
+<script src="../js/ajax1.js"></script>
+<body>
+    <!-- 这是一个动画片 -->
+    <h2>动画片</h2>
+    <ul>
+        <li>火影忍者</li>
+        <li>海贼王</li>
+        <li>黑猫警长</li>
+    </ul>
+    <script>
+        //获取操作对象
+        var h2=document.querySelector("h2")
+        //给当前h2点击点击事件
+        h2.onclick=function(){
+            ajax({
+                url:'/aaa',
+                success:function(dt){
+                    console.log(dt)
+                }
+            })
+        }
+    </script>
+</body>
+</html>
